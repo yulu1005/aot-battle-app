@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:background="@drawable/bg_aot"
+    tools:context=".MainActivity">
+
+    <!-- 標題 -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="進擊的巨人"
+        android:textColor="#4D8299"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 目前角色名稱 -->
+    <TextView
+        android:id="@+id/tv_selected_character"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="目前角色：艾連"
+        android:textColor="#060809"
+        android:textColorHighlight="#C7BABA"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+    <!-- 切換角色按鈕 -->
+    <Button
+        android:id="@+id/btn_change_character"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="切換角色"
+        android:textColorLink="#AD7E7E"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_selected_character" />
+
+    <!-- 玩家角色 -->
+    <TextView
+        android:id="@+id/tvCharacter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="艾連"
+        android:textColor="#060809"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_change_character" />
+
+    <!-- 巨人 -->
+    <TextView
+        android:id="@+id/tvTitan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="巨人"
+        android:textColor="#060809"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvCharacter" />
+
+    <!-- 玩家進度條 -->
+    <SeekBar
+        android:id="@+id/sbCharacter"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:max="100"
+        app:layout_constraintStart_toEndOf="@id/tvCharacter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvCharacter"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" />
+
+    <!-- 巨人進度條 -->
+    <SeekBar
+        android:id="@+id/sbTitan"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:max="100"
+        app:layout_constraintStart_toEndOf="@id/tvTitan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvTitan"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" />
+
+    <!-- 開始戰鬥 -->
+    <Button
+        android:id="@+id/btn_start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="開始戰鬥"
+        app:layout_constraintTop_toBottomOf="@id/sbTitan"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="64dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
